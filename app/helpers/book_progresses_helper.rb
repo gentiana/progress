@@ -1,0 +1,2 @@
+module BookProgressesHelper
+end

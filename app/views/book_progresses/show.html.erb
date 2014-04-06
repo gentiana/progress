@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Percent:</strong>
+  <%= @book_progress.percent %>
+</p>
+
+<p>
+  <strong>Book:</strong>
+  <%= @book_progress.book_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @book_progress.date %>
+</p>
+
+<%= link_to 'Edit', edit_book_progress_path(@book_progress) %> |
+<%= link_to 'Back', book_progresses_path %>

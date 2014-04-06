@@ -1,0 +1,31 @@
+<h1>Listing book_progresses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Percent</th>
+      <th>Book</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @book_progresses.each do |book_progress| %>
+      <tr>
+        <td><%= book_progress.percent %></td>
+        <td><%= book_progress.book_id %></td>
+        <td><%= book_progress.date %></td>
+        <td><%= link_to 'Show', book_progress %></td>
+        <td><%= link_to 'Edit', edit_book_progress_path(book_progress) %></td>
+        <td><%= link_to 'Destroy', book_progress, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Book progress', new_book_progress_path %>
